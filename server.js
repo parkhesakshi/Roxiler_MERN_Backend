@@ -11,7 +11,7 @@ mongoConnect();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://roxiler-mern-frontend.onrender.com",
+    origin: "https://roxiler-mern-assessment.onrender.com",
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
@@ -19,7 +19,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the API! Use /test to check the API status.");
+  res.send("Welcome to the API!");
 });
 
 app.use('/', apiRoutes);

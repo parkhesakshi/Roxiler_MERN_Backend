@@ -9,7 +9,14 @@ const app = express();
 
 mongoConnect();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://roxiler-mern-frontend.onrender.com",
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  })
+);
 
 app.use('/', apiRoutes);
 

@@ -18,8 +18,8 @@ app.use(
   })
 );
 
-app.get("/test", (req, res) => {
-  res.json({ message: "API is working!" });
+app.get("/", (req, res) => {
+  res.send("Welcome to the API! Use /test to check the API status.");
 });
 
 app.use('/', apiRoutes);

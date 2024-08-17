@@ -18,6 +18,10 @@ app.use(
   })
 );
 
+app.get("/test", (req, res) => {
+  res.json({ message: "API is working!" });
+});
+
 app.use('/', apiRoutes);
 
 const PORT = process.env.PORT || 8080;
